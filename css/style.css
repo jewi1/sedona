@@ -99,6 +99,19 @@ input[type="radio"].visually-hidden {
     font-weight: 700;
 }
 
+.site-navigation li a:hover {
+    color: #81b3d2;
+}
+
+.site-navigation li a:active {
+    color: #b2b2b2;
+}
+
+.site-navigation-current {
+    font-weight: 700;
+    color: #766357;
+}
+
 .header-logo {
     position: absolute;
     width: 138px;
@@ -385,6 +398,16 @@ input[type="radio"].visually-hidden {
     font-weight: 700;
 }
 
+.search-form input:hover {
+    background-color: #ebebeb;
+}
+
+.search-form input:focus {
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+    outline: none;
+}
+
 .search-form .entry,
 .search-form .departure {
     padding-top: 5px;
@@ -462,7 +485,7 @@ input[type="radio"].visually-hidden {
 }
 
 .amount button[name="minus-adult"] {
-    margin-left: 40px;
+    margin-left: 46px;
 }
 
 .amount button[name="plus-adult"] {
@@ -799,6 +822,11 @@ input[type="radio"].visually-hidden {
     cursor: pointer;
 }
 
+.btn-transparent:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 .sorting {
     display: flex;
     min-height: 87px;
@@ -830,6 +858,24 @@ input[type="radio"].visually-hidden {
 
 .sorting-list li {
     margin-right: 33px;
+}
+
+.sorting-list li a {
+    color: #b2b2b2;
+    border-bottom: 1px dotted #81b3d2;
+}
+
+.sorting-list li a:hover {
+    color: #81b3d2;
+}
+
+.sorting-list li a:active {
+    color: #000000;
+    border-bottom: none;
+}
+
+.sorting-list-current {
+    color: #81b3d2;
 }
 
 .sorting-list li:last-child {
@@ -895,10 +941,19 @@ input[type="radio"].visually-hidden {
     align-content: flex-start;
 }
 
-.hotel-description h2 {
+.hotel-description-title h2 {
     min-width: 750px;
     margin-top: 0;
     margin-bottom: 5px;
+    color: #000000;
+}
+
+.hotel-description-title h2:hover {
+    color: #81b3d2;
+}
+
+.hotel-description-title h2:active {
+    color: #b2b2b2;
 }
 
 .details-item {
@@ -918,6 +973,15 @@ input[type="radio"].visually-hidden {
     margin-top: 15px;
 }
 
+.details-item a:hover {
+    background-color: #669ec0;
+}
+
+.details-item a:active {
+    background-color: #5496bd;
+    color: #88b6d1;
+}
+
 .reserve-item {
     width: 142px;
 }
@@ -933,6 +997,14 @@ input[type="radio"].visually-hidden {
     margin-top: 15px;
 
     display: block;
+}
+
+.reserve-item a:hover {
+    background-color: #604e43;
+}
+
+.reserve-item a:active {
+    color: #857871;
 }
 
 .rating-item {
