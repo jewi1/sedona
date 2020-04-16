@@ -334,6 +334,7 @@ input[type="radio"].visually-hidden {
     width: 576px;
     padding-top: 30px;
     padding-bottom: 30px;
+    cursor: pointer;
 }
 
 .map-section {
@@ -343,6 +344,11 @@ input[type="radio"].visually-hidden {
 .form-block {
     width: 576px;
     margin: 0 auto;
+    display: none;
+}
+
+.form-block-show {
+    display: block;
 }
 
 .search-form {
@@ -535,8 +541,63 @@ input[type="radio"].visually-hidden {
     right: 62px;
 }
 
-.icon-plus::before {
+.amount button {
+    position: relative;
+    cursor: pointer;
+}
+
+.icon-minus::before {
     content: "";
+    width: 11px;
+    height: 3px;
+    background-color: #a9a9a9;
+    vertical-align: middle;
+}
+
+.icon-plus::before,
+.icon-plus::after {
+    content: "";
+    width: 11px;
+    height: 3px;
+    background-color: #a9a9a9;
+    vertical-align: middle;
+}
+
+.amount .icon-plus::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -5.5px;
+    display: block;
+    content: "";
+    width: 11px;
+    height: 3px;
+    background-color: #a9a9a9;
+    transform: rotate(90deg);
+}
+
+.icon-minus:hover::before {
+    background-color: #000000;
+}
+
+.icon-plus:hover::before  {
+    background-color: #000000;
+}
+
+.icon-plus:hover::after {
+    background-color: #000000;
+}
+
+.icon-minus:active::before {
+    background-color: #5496bd;
+}
+
+.icon-plus:active::before {
+    background-color: #5496bd;
+}
+
+.icon-plus:active::after {
+    background-color: #5496bd;
 }
 
 .search-form > button {
@@ -545,6 +606,16 @@ input[type="radio"].visually-hidden {
     background-color: #81b3d2;
     border: none;
     align-self: flex-end;
+    cursor: pointer;
+}
+
+.button-search-form-submit:hover {
+    background-color: #669ec0;
+}
+
+.button-search-form-submit:active {
+    background-color: #5496bd;
+    color: #88b6d1;
 }
 
 .main-footer {
@@ -584,13 +655,13 @@ input[type="radio"].visually-hidden {
     width: 150px;
 }
 
-.footer-social-item {
+.footer-social-item a{
     background: #81b3d2;
     width: 46px;
     height: 48px;
 }
 
-.footer-social-item{
+.footer-social-item a{
     display: flex;
     align-items: center;
     vertical-align: middle;
@@ -598,6 +669,18 @@ input[type="radio"].visually-hidden {
     justify-content: center;
 
     margin-right: 6px;
+}
+
+.footer-social-item a:hover {
+    background-color: #669ec0;
+}
+
+.footer-social-item a:active {
+    background-color: #5496bd;
+}
+
+.footer-social-item a:active path {
+    fill: #88b6d1;
 }
 
 .developer-block {
@@ -612,6 +695,14 @@ input[type="radio"].visually-hidden {
     text-decoration: none;
     font-size: 14px;
     line-height: 26px;
+}
+
+.developer-link:hover .developer-logo path {
+    fill: #81b3d2;
+}
+
+.developer-link:active .developer-logo path {
+    fill: #bdbbbc;
 }
 
 .developer-link .developer-logo {

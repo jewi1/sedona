@@ -174,20 +174,16 @@
                         <input type="text" name="departure-date" id="departure-date" value="4 июля 2020">
                         <div class="amount">
                             <label for="amount-of-adults">Взрослые:</label>
-                            <button type="button" name="minus-adult">
-                                <span class="icon-minus"></span>
+                            <button type="button" name="minus-adult" class="icon-minus">
                             </button>
                             <input type="text" name="amount-of-adults" id="amount-of-adults" value="2">
-                            <button type="button" name="plus-adult">
-                                <span class="icon-plus"></span>
+                            <button type="button" name="plus-adult" class="icon-plus">
                             </button>
                             <label for="amount-of-children">Дети:</label>
-                            <button type="button" name="minus-children">
-                                <span class="icon-minus"></span>
+                            <button type="button" name="minus-children" class="icon-minus">
                             </button>
                             <input type="text" name="amount-of-children" id="amount-of-children" value="0">
-                            <button type="button" name="plus-children">
-                                <span class="icon-plus"></span>
+                            <button type="button" name="plus-children" class="icon-plus">
                             </button>
                         </div>
                         <button type="submit" class="button button-search-form-submit">Найти</button>
@@ -233,5 +229,15 @@
             </div>
         </footer>
     </div>
+    <script>
+        "use strict";
+        let link = document.querySelector(".show-form-button");
+        let popup = document.querySelector(".form-block");
+
+        link.addEventListener("click" , function(evt) {
+            evt.preventDefault();
+            popup.classList.add("form-block-show");
+        });
+    </script>
 </body>
 </html>
