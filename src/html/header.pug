@@ -1,2 +1,13 @@
-header 
-  h1 Это шапка
+header.header 
+	a.header__logo(href="index.html") 
+		p.visually-hidden Главная страница
+		img(src="@img/header-logo.png", alt="Логотип Седоны")
+	ul.header__navigation 
+		li.header__item
+			a.header__link(href="#") Информация
+		li.header__item
+			a.header__link(href="#") Фото и видео
+		li.header__item
+			a.header__link(href="#") Карта штата
+		li.header__item
+			a.header__link(href="#") Гостиницы

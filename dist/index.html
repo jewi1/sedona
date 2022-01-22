@@ -1,16 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css?_V=20220122231027">
+    <title>Sedona</title>
   </head>
-  <body> </body>
-  <header> 
-    <h1>Это шапка</h1>
-  </header>
-  <footer> 
-    <p>А это подвал</p>
-  </footer>
+  <body> 
+    <div class="container"> 
+      <header class="header"> <a class="header__logo" href="index.html"> 
+          <p class="visually-hidden">Главная страница</p><picture><source srcset="img/header-logo.webp" type="image/webp"><img src="img/header-logo.png" alt="Логотип Седоны"></picture></a>
+        <ul class="header__navigation"> 
+          <li class="header__item"><a class="header__link" href="#">Информация</a></li>
+          <li class="header__item"><a class="header__link" href="#">Фото и видео</a></li>
+          <li class="header__item"><a class="header__link" href="#">Карта штата</a></li>
+          <li class="header__item"><a class="header__link" href="#">Гостиницы</a></li>
+        </ul>
+      </header>
+      <main> 
+        <section class="banner"> 
+          <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
+          <div class="banner__text"> <picture><source srcset="img/banner-text.webp" type="image/webp"><img src="img/banner-text.png" alt="Text"></picture></div>
+          <div class="banner__shape"><picture><source srcset="img/banner-shape.webp" type="image/webp"><img src="img/banner-shape.png" alt="shape"></picture></div>
+        </section>
+        <section class="advantages"> 
+          <h2 class="advantages__promo">Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
+          <p class="advantages__subpromo">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+          <div class="advantages__top"> 
+            <div class="advantages__big"> 
+              <div class="advantages__left"> <strong class="advantages__title">Настоящий<br>городок</strong>
+                <p class="advantages__number">-№1-</p>
+                <p class="advantages__subtitle">Седона — не аттракцион для туристов,<br>там течет своя жизнь</p>
+              </div>
+              <div class="advantages__right"> <picture><source srcset="img/advantages-1.webp" type="image/webp"><img src="img/advantages-1.jpg" alt="Настоящий городок"></picture></div>
+            </div>
+            <ul class="advantages__list"> 
+              <li class="advantages__item"> <strong class="advantages__title">Жилье</strong>
+                <p class="advantages__subtitle">Рекомендуем пожить в настоящем<br>мотеле, все как в кино</p>
+              </li>
+              <li class="advantages__item"> <strong class="advantages__title">Еда</strong>
+                <p class="advantages__subtitle">Всегда заказывайте фирменный бургер,<br>вы не разочаруйтесь</p>
+              </li>
+              <li class="advantages__item"> <strong class="advantages__title">Сувениры</strong>
+                <p class="advantages__subtitle">Не только китайского, но и местного<br>производства!</p>
+              </li>
+            </ul>
+          </div>
+          <div class="advantages__bottom">
+            <div class="advantages__big"> 
+              <div class="advantages__left"> <picture><source srcset="img/advantages-2.webp" type="image/webp"><img src="img/advantages-2.jpg" alt="Настоящий городок"></picture></div>
+              <div class="advantages__right"> <strong class="advantages__title">Там есть<br>мост дьявола</strong>
+                <p class="advantages__number">-№2-</p>
+                <p class="advantages__subtitle">Да, по нему можно пройти! Если конечно<br>вы осмелитесь</p>
+              </div>
+            </div>
+            <ul class="advantages__list"> 
+              <li class="advantages__item"> <strong class="advantages__title">Небольшая<br>площадь</strong>
+                <p class="advantages__number">-№3-</p>
+                <p class="advantages__subtitle">Все достопремичательности<br>находяться очень близко</p>
+              </li>
+              <li class="advantages__item"> <strong class="advantages__title">Красивая<br>дорога</strong>
+                <p class="advantages__number">-№4-</p>
+                <p class="advantages__subtitle">Ехать в Седону из Лас-Вегаса совсем<br>не скучно</p>
+              </li>
+              <li class="advantages__item"> <strong class="advantages__title">Мало<br>туристов</strong>
+                <p class="advantages__number">-№5-</p>
+                <p class="advantages__subtitle">Большинство едет в Гранд Каньон и<br>толпится там</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="feedback">
+          <h2 class="feedback__title">Заинтересовались?</h2>
+          <p class="feedback__text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p><a class="feedback__btn" href="#">Поиск гостиницы в седоне</a>
+          <div class="feedback__popup"> 
+            <form class="feedback__form" action="GET"> 
+              <div class="feedback__item"> 
+                <label class="feedback__label" for="check-in">Дата заезда:</label>
+                <input class="feedback__input" id="check-in" type="date" name="check-in" value="2017-04-24">
+              </div>
+              <div class="feedback__item"> 
+                <label class="feedback__label" for="check-out">Дата выезда:</label>
+                <input class="feedback__input" id="check-out" type="date" name="check-out" value="2017-07-04">
+              </div>
+              <div class="feedback__item"> 
+                <div class="feedback__left"> 
+                  <label class="feedback__label" for="adult">Взрослые:</label>
+                  <div class="feedback__counter">
+                    <button class="feedback__minus">-</button>
+                    <input id="adult" type="number" name="adult" min="0" value="0">
+                    <button class="feedback__plus">+</button>
+                  </div>
+                </div>
+                <div class="feedback__right">
+                  <label class="feedback__label" for="child">Дети:</label>
+                  <div class="feedback__counter">
+                    <button class="feedback__minus">-</button>
+                    <input id="child" type="number" name="child" min="0" value="0">
+                    <button class="feedback__plus">+</button>
+                  </div>
+                </div>
+              </div>
+              <button class="feedback__submit" type="submit">Найти</button>
+            </form>
+          </div>
+        </section>
+        <section class="map">
+          <div class="map__img"> <picture><source srcset="img/map.webp" type="image/webp"><img src="img/map.jpg" alt="Карта"></picture></div>
+        </section>
+      </main>
+      <script src="js/app.min.js?_V=20220122231027"> </script>
+    </div>
+  </body>
 </html>
