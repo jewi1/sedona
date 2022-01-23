@@ -31,16 +31,37 @@
   @include btn(568px, 86px, #766357, 21px, 26px);
 
   margin: 0 auto;
+  transition-property: all;
+  transition-duration: 0.2s;
+}
+
+.feedback__btn:hover {
+  background-color: #604e43;
+}
+
+.feedback__btn:active {
+  background-color: #503e33;
+  color: rgba($color: #ffffff, $alpha: 0.4);
 }
 
 .feedback__popup {
-  display: block;
+  display: none;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   background-color: $white;
   width: 568px;
   height: 395px;
+  transition-property: all;
+  transition-duration: 0.2s;
+  opacity: 0;
+}
+
+.feedback__popup--active {
+  display: block;
+  opacity: 1;
+  transition-property: all;
+  transition-duration: 0.2s;
 }
 
 .feedback__form {
@@ -62,7 +83,7 @@
   width: 348px;
   height: 38px;
   background-color: #f2f2f2;
-  border: none;
+  border: 2px solid transparent;
 
   padding-left: 13px;
 
@@ -70,6 +91,18 @@
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
+
+  transition-property: all;
+  transition-duration: 0.2s;
+}
+
+.feedback__input:hover {
+  background-color: #ebebeb;
+}
+
+.feedback__input:focus {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
 }
 
 .feedback__item {
@@ -103,6 +136,16 @@
     border: none;
     background-color: #f2f2f2;
     text-align: center;
+    transition-property: all;
+    transition-duration: 0.2s;
+  }
+
+  input:hover {
+    background-color: #ebebeb;
+  }
+
+  input:focus {
+    background-color: #ffffff;
   }
 }
 
@@ -118,6 +161,19 @@
   font-size: 24px;
   font-weight: 700;
   color: #a9a9a9;
+
+  transition-property: all;
+  transition-duration: 0.2s;
+}
+
+.feedback__minus:hover,
+.feedback__plus:hover {
+  color: #000000;
+}
+
+.feedback__minus:active,
+.feedback__plus:active {
+  color: $blue;
 }
 
 .feedback__right {
@@ -128,5 +184,16 @@
 
 .feedback__submit {
   @include btn(458px, 58px, #81b3d2, 21px, 26px);
+  transition-property: all;
+  transition-duration: 0.2s;
+}
+
+.feedback__submit:hover {
+  background-color: #669ec0;
+}
+
+.feedback__submit:active {
+  background-color: #5496bd;
+  color: rgba($color: #ffffff, $alpha: 0.5);
 }
 

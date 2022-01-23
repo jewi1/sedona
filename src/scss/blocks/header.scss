@@ -29,6 +29,8 @@
   color: $black;
   text-transform: uppercase;
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 0.2s;
 }
 
 .header__item:first-child {
@@ -42,3 +44,12 @@
 .header__item:nth-child(3) {
   margin-right: 162px;
 }
+
+.header__link:hover {
+  color: $blue;
+}
+
+.header__link:active {
+  color: #cacaca;
+}
+
