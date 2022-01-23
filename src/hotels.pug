@@ -1,0 +1,137 @@
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="css/style.min.css")
+		title Sedona // Hotels
+	body.hotels
+		.container
+			include html/header
+			main
+				section.filter
+					h2.visually-hidden Фильтр отелей
+					.filter__block
+						form.filter__form(action="#")
+							.filter__infrastructure
+								strong.filter__title Инфраструктура:
+								.filter__item
+									input#pool(type="checkbox", name="infrastructure" value="pool")
+									label(for="pool") Бассейн
+								.filter__item
+									input#parking(type="checkbox", name="infrastructure" value="parking")
+									label(for="parking") Парковка
+								.filter__item
+									input#wifi(type="checkbox", name="infrastructure" value="wifi")
+									label(for="wifi") Wi-Fi
+							.filter__house
+								strong.filter__title Тип жилья
+								.filter__item
+									input#hotel(type="checkbox", name="infrastructure" value="hotel")
+									label(for="hotel") Отель
+								.filter__item
+									input#motel(type="checkbox", name="infrastructure" value="motel")
+									label(for="motel") Мотель
+								.filter__item
+									input#apartments(type="checkbox", name="infrastructure" value="apartments")
+									label(for="apartments") Апартаменты
+							.filter__price
+								strong.filter__title Стоимость в сутки (Р):
+								.filter__price-block
+									input#from(type="number", name="from" min="0" value="0")
+									input#to(type="number", name="to", value="3000")
+								.filter__container
+									.filter__scale
+										.filter__bar
+									.filter__range-toggle
+									.filter__range-toggle
+								button.filter__submit(type="submit") Показать
+				section.results
+					.results__sort
+						h2.results__title Найдено: <span class="results__number">3</span>
+						.results__links
+							p.results__links-title Сортировка:
+							a.results__link.results__link--active(href="#") По цене
+							a.results__link(href="#") По типу
+							a.results__link(href="#") По рейтингу
+						.results__arrows
+							a.results__top(href="#")
+								p.visually-hidden Вверх
+								svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='11px' height='10px' viewBox='0 0 11 10' enable-background='new 0 0 11 10' xml:space='preserve')
+									polygon(fill='#231F20' points='5.5,0 0,10 11,10 ')
+							a.results__bottom.results__bottom--active(href="#")
+								p.visually-hidden Вниз
+								svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='11px' height='10px' viewBox='0 0 11 10' enable-background='new 0 0 11 10' xml:space='preserve')
+									polygon(fill='#231F20' points='5.5,0 0,10 11,10 ')
+					ul.results__list
+						li.results__item
+							img.results__img(src="@img/hotel-1.jpg", alt="Amara")
+							.results__info
+								a.results__hotel(href="#") 
+									h3 Amara resort & SPA
+								.results__type-price
+									span.results__type Гостиница
+									span.results__price от 4000 Р.
+								.results__actions
+									a.results__more(href="#") Подробнее
+									a.results__book(href="#") Забронировать
+							.results__rating
+								.results__stars
+									.results__star
+										svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='18px' height='17px' viewBox='0 0 18 17' enable-background='new 0 0 18 17' xml:space='preserve')
+											polygon(fill='#81B3D2' points='9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506 \ 0,6.494 6.878,6.494 ')
+									.results__star
+										svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='18px' height='17px' viewBox='0 0 18 17' enable-background='new 0 0 18 17' xml:space='preserve')
+											polygon(fill='#81B3D2' points='9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506 \ 0,6.494 6.878,6.494 ')
+									.results__star
+										svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='18px' height='17px' viewBox='0 0 18 17' enable-background='new 0 0 18 17' xml:space='preserve')
+											polygon(fill='#81B3D2' points='9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506 \ 0,6.494 6.878,6.494 ')
+									.results__star
+										svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='18px' height='17px' viewBox='0 0 18 17' enable-background='new 0 0 18 17' xml:space='preserve')
+											polygon(fill='#81B3D2' points='9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506 \ 0,6.494 6.878,6.494 ')
+								p.results__grade Рейтинг: 8,5
+						li.results__item
+							img.results__img(src="@img/hotel-2.jpg", alt="Desert")
+							.results__info
+								a.results__hotel(href="#") 
+									h3 Desert quail inn
+								.results__type-price
+									span.results__type Мотель
+									span.results__price от 3000 Р.
+								.results__actions
+									a.results__more(href="#") Подробнее
+									a.results__book(href="#") Забронировать
+							.results__rating
+								.results__stars
+									.results__star
+										svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='18px' height='17px' viewBox='0 0 18 17' enable-background='new 0 0 18 17' xml:space='preserve')
+											polygon(fill='#81B3D2' points='9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506 \ 0,6.494 6.878,6.494 ')
+									.results__star
+										svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='18px' height='17px' viewBox='0 0 18 17' enable-background='new 0 0 18 17' xml:space='preserve')
+											polygon(fill='#81B3D2' points='9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506 \ 0,6.494 6.878,6.494 ')
+									.results__star
+										svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='18px' height='17px' viewBox='0 0 18 17' enable-background='new 0 0 18 17' xml:space='preserve')
+											polygon(fill='#81B3D2' points='9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506 \ 0,6.494 6.878,6.494 ')
+								p.results__grade Рейтинг: 8,9
+						li.results__item
+							img.results__img(src="@img/hotel-3.jpg", alt="villas")
+							.results__info
+								a.results__hotel(href="#") 
+									h3 Villas at poco diablo
+								.results__type-price
+									span.results__type Аппартаменты
+									span.results__price от 2000 Р.
+								.results__actions
+									a.results__more(href="#") Подробнее
+									a.results__book(href="#") Забронировать
+							.results__rating
+								.results__stars
+									.results__star
+										svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='18px' height='17px' viewBox='0 0 18 17' enable-background='new 0 0 18 17' xml:space='preserve')
+											polygon(fill='#81B3D2' points='9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506 \ 0,6.494 6.878,6.494 ')
+									.results__star
+										svg(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='18px' height='17px' viewBox='0 0 18 17' enable-background='new 0 0 18 17' xml:space='preserve')
+											polygon(fill='#81B3D2' points='9.002,0 11.128,6.494 18.005,6.494 12.441,10.506 14.566,17 9.002,12.987 3.438,17 5.564,10.506 \ 0,6.494 6.878,6.494 ')
+								p.results__grade Рейтинг: 9,2
+			script(src="js/app.min.js")
+			include html/footer

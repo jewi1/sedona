@@ -3,7 +3,6 @@
   width: 1200px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
   padding-left: 133px;
   padding-right: 133px;
@@ -12,6 +11,11 @@
 
   position: absolute;
   bottom: 0;
+}
+
+.hotels .footer {
+  position: static;
+  background-color: #ffffff;
 }
 
 .footer__hashtag {
@@ -23,6 +27,8 @@
   text-decoration: none;
 
   text-transform: uppercase;
+
+  margin-right: 256px;
 }
 
 .footer__social {
@@ -31,6 +37,8 @@
   list-style: none;
 
   display: flex;
+
+  margin-right: auto
 }
 
 .footer__social-item {
